@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  An autonomous, solar-powered environmental monitoring platform designed for polar and extreme cold-water environments.
+  An autonomous, solar-powered environmental monitoring platform designed for polar and extreme cold-water environments. (AI visualization)
 </p>
 
 ---
@@ -83,7 +83,7 @@ These results indicate that the modeled energy architecture maintained sufficien
 
 The mechanical architecture is designed to protect the internal electronics while maintaining buoyancy, stability, and thermal isolation in cold-water environments.
 
-The structure is divided into functional regions rather than treating the buoy as a single enclosure.
+The structure is divided into functional regions rather than treating the buoy as a single enclosure. (AI visualization)
 
 ### 2.1 Hull and Buoyancy Structure
 
