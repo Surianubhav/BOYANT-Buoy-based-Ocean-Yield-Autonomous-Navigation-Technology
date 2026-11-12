@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  **An autonomous, solar-powered environmental monitoring platform designed for polar and extreme cold-water environments.**
+  An autonomous, solar-powered environmental monitoring platform designed for polar and extreme cold-water environments.
 </p>
 
 ---
@@ -283,7 +283,7 @@ These simulations provide an initial electrical design validation before physica
 
 For the complete simulation methodology, input datasets, assumptions, configuration parameters, stress scenarios, Monte Carlo analysis, results, and visualisations, refer to:
 
-**[`Iteration2/simulations/README.md`](Iteration2/simulations/README.md)**
+**[`Iteration2/README.md`](Iteration2/README.md)**
 
 ---
 
