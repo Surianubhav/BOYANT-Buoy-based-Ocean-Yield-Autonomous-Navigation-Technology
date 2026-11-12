@@ -1,0 +1,478 @@
+{
+  "name": "sd_not_power_gated",
+  "load_margin": 1.0,
+  "site": {
+    "lat": -63.6686,
+    "lon": 40.4935
+  },
+  "dt_min": 10,
+  "n_days": 365,
+  "weather": {
+    "max_gap_h": 6.0,
+    "allow_gaps": false,
+    "allow_short": false,
+    "time_basis": "auto"
+  },
+  "pv": {
+    "n_panels": 8,
+    "v_mp": 8.3,
+    "i_mp": 0.85,
+    "area_m2": 0.03656,
+    "eff": 0.193,
+    "p_stc_source": "vmp_imp",
+    "p_stc_tolerance": 0.05,
+    "tilt_deg": 45.0,
+    "heading_deg": 0.0,
+    "temp_coeff": -0.0035,
+    "noct": 45.0,
+    "wiring": "series_pairs",
+    "albedo_monthly": [
+      0.08,
+      0.08,
+      0.1,
+      0.25,
+      0.55,
+      0.6,
+      0.6,
+      0.6,
+      0.55,
+      0.5,
+      0.3,
+      0.1
+    ],
+    "iam_b0": 0.05,
+    "soiling": 0.95,
+    "motion": 0.95,
+    "wiring_eff": 0.97,
+    "mppt_eff": 0.95,
+    "mppt_min_w": 0.05,
+    "scale": 1.0,
+    "panel_failures": [],
+    "icing": {
+      "enabled": false,
+      "t_below_c": -2.0,
+      "rh_min_pct": 90.0,
+      "spray_ws_ms": 10.0,
+      "grow_per_h": 0.02,
+      "shed_per_h": 0.05,
+      "melt_above_c": 0.5,
+      "sun_shed_poa_wm2": 300.0,
+      "max_loss": 0.7
+    }
+  },
+  "batt": {
+    "nominal_wh": 192.0,
+    "n_cells_series": 4,
+    "charge_eff": 0.95,
+    "discharge_eff": 0.95,
+    "ohmic_separate": true,
+    "self_discharge_per_month": 0.03,
+    "soc0": 0.95,
+    "min_soc_policy": 0.2,
+    "cutoff_soc": 0.03,
+    "restart_soc": 0.1,
+    "charge_min_temp_c": 0.0,
+    "allow_cold_charge": false,
+    "op_temp_range": [
+      -20.0,
+      60.0
+    ],
+    "enforce_op_temp": true,
+    "cap_vs_temp": [
+      [
+        -20,
+        -10,
+        0,
+        10,
+        25,
+        40
+      ],
+      [
+        70,
+        80,
+        90,
+        95,
+        100,
+        100
+      ]
+    ],
+    "r_int_ohm": 0.06,
+    "r_int_vs_temp": [
+      [
+        -20,
+        -10,
+        0,
+        10,
+        25
+      ],
+      [
+        3.0,
+        2.2,
+        1.6,
+        1.25,
+        1.0
+      ]
+    ],
+    "max_charge_a": 30.0,
+    "max_discharge_a": 15.0,
+    "fade_per_year": 0.02,
+    "ocv_soc": [
+      0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "ocv_cell": [
+      2.9,
+      3.1,
+      3.2,
+      3.24,
+      3.26,
+      3.28,
+      3.29,
+      3.31,
+      3.33,
+      3.35,
+      3.4,
+      3.45,
+      3.55
+    ]
+  },
+  "pe": {
+    "eta_5v": 0.9895,
+    "eta_3v3": 0.9299,
+    "quiescent_w": 0.004
+  },
+  "thermal": {
+    "hdpe_t_m": 0.008,
+    "k_hdpe": 0.45,
+    "gap_t_m": 0.01,
+    "k_air": 0.026,
+    "xps_t_m": 0.05,
+    "k_xps": 0.032,
+    "pc_t_m": 0.005,
+    "k_pc": 0.2,
+    "area_m2": 0.5,
+    "frac_water": 0.6,
+    "bridge_ua": 0.03,
+    "h_water": 500.0,
+    "wind_factor": 0.6,
+    "heat_capacity_enc_j_k": 1500.0,
+    "heat_capacity_batt_j_k": 2000.0,
+    "ua_batt_enc_w_k": 0.8,
+    "heater_to_batt_frac": 0.7,
+    "inside_groups": [
+      "mcu",
+      "gnss",
+      "comm",
+      "sd",
+      "imu",
+      "internal"
+    ],
+    "t_enc0": 2.0,
+    "t_batt0": 2.0,
+    "sst_mean": -0.7,
+    "sst_amp": 1.1,
+    "sst_peak_doy": 50,
+    "sst_floor": -1.8
+  },
+  "heater": {
+    "policy": "adaptive",
+    "power_w": 6.0,
+    "protect_on_c": -12.0,
+    "protect_off_c": -8.0,
+    "protect_min_soc": 0.15,
+    "assist_on_c": 0.5,
+    "assist_off_c": 3.0,
+    "assist_max_soc": 0.97,
+    "assist_pv_on_frac": 0.6,
+    "assist_pv_hold_frac": 0.3,
+    "thermo_on_c": 8.0,
+    "thermo_off_c": 10.0,
+    "thermo_min_soc": 0.05
+  },
+  "modes": {
+    "deep_enter_soc": 0.2,
+    "deep_exit_soc": 0.3,
+    "low_enter_soc": 0.5,
+    "low_exit_soc": 0.65,
+    "low_enter_harvest_wh_day": 5.0,
+    "low_exit_harvest_wh_day": 10.0,
+    "low_harvest_soc_gate": 1.1,
+    "intervals_h": {
+      "sensors": {
+        "3": 0.25,
+        "2": 2.0,
+        "1": 12.0
+      },
+      "imu": {
+        "3": 0.5,
+        "2": 0.0,
+        "1": 0.0
+      },
+      "gnss": {
+        "3": 1.0,
+        "2": 6.0,
+        "1": 24.0
+      },
+      "comm": {
+        "3": 6.0,
+        "2": 24.0,
+        "1": 48.0
+      }
+    },
+    "alert_min_gap_h": 12.0
+  },
+  "sensors": [
+    [
+      "DS18B20_water",
+      "ctd",
+      3.3,
+      1.5,
+      0.0,
+      0.75,
+      1,
+      1,
+      [
+        3,
+        2
+      ]
+    ],
+    [
+      "TDS_conductivity",
+      "ctd",
+      5.0,
+      6.0,
+      3.0,
+      1.0,
+      1,
+      2,
+      [
+        3,
+        2
+      ]
+    ],
+    [
+      "depth_pressure",
+      "ctd",
+      3.3,
+      1.0,
+      0.02,
+      0.2,
+      1,
+      1,
+      [
+        3,
+        2
+      ]
+    ],
+    [
+      "pH",
+      "ph",
+      5.0,
+      10.0,
+      0.0,
+      60.0,
+      1,
+      1,
+      [
+        3
+      ]
+    ],
+    [
+      "turbidity",
+      "turb",
+      5.0,
+      30.0,
+      1.0,
+      0.5,
+      1,
+      1,
+      [
+        3
+      ]
+    ],
+    [
+      "DO_optical",
+      "do",
+      3.3,
+      15.0,
+      2.0,
+      8.0,
+      1,
+      1,
+      [
+        3
+      ]
+    ],
+    [
+      "SHT20_air",
+      "atmos",
+      3.3,
+      0.33,
+      0.0,
+      0.1,
+      1,
+      2,
+      [
+        3,
+        2,
+        1
+      ]
+    ],
+    [
+      "BMP280",
+      "atmos",
+      3.3,
+      1.1,
+      0.002,
+      0.01,
+      1,
+      2,
+      [
+        3,
+        2,
+        1
+      ]
+    ],
+    [
+      "photodiode_irr",
+      "atmos",
+      3.3,
+      0.1,
+      0.0,
+      0.05,
+      1,
+      1,
+      [
+        3,
+        2
+      ]
+    ],
+    [
+      "DHT22_internal",
+      "internal",
+      3.3,
+      1.5,
+      0.0,
+      2.0,
+      1,
+      2,
+      [
+        3,
+        2
+      ]
+    ],
+    [
+      "DS18B20_batt_elec",
+      "internal",
+      3.3,
+      1.5,
+      0.0,
+      0.75,
+      2,
+      1,
+      [
+        3,
+        2,
+        1
+      ]
+    ],
+    [
+      "chlorophyll_a",
+      "chl",
+      5.0,
+      30.0,
+      5.0,
+      5.0,
+      1,
+      1,
+      []
+    ]
+  ],
+  "mcu": {
+    "ua_per_mhz": 84.0,
+    "f_mhz": 24.0,
+    "v": 3.3,
+    "sleep_ua": 2.05,
+    "awake_base_s": 2.0,
+    "awake_per_sensor_s": 0.1,
+    "imu_duty": 0.2
+  },
+  "imu": {
+    "v": 3.3,
+    "i_ma": 3.4,
+    "burst_s": 60.0,
+    "odr_hz": 10.0,
+    "bytes_per_sample": 100
+  },
+  "gnss": {
+    "model": "neo6m",
+    "neo6m": {
+      "v": 3.3,
+      "i_acq_ma": 47.0,
+      "i_trk_ma": 37.0,
+      "cold_s": 27.0,
+      "hot_s": 1.0,
+      "backup_ua": 22.0
+    },
+    "l89ha": {
+      "v": 3.3,
+      "i_acq_ma": 32.0,
+      "i_trk_ma": 32.0,
+      "cold_s": 13.0,
+      "hot_s": 1.0,
+      "backup_ua": 51.0
+    },
+    "track_s": 5.0,
+    "ephemeris_valid_h": 4.0
+  },
+  "comm": {
+    "v": 3.3,
+    "tx_ma": 100.0,
+    "tx_s": 105.0,
+    "rx_ma": 20.0,
+    "rx_s": 15.0,
+    "payload_bytes": 240,
+    "sleep_ua": 0.0,
+    "max_packets_per_window": 4,
+    "link_success_prob": 1.0,
+    "retry_after_h": 1.0,
+    "max_retries": 2,
+    "outages": [],
+    "backlog_max_packets": 2000,
+    "rng_seed": 12345
+  },
+  "sd": {
+    "v": 3.3,
+    "write_ma": 75.0,
+    "sleep_ma": 22.5,
+    "power_gated": false,
+    "on_s_base": 0.5,
+    "throughput_Bps": 1000000.0,
+    "capacity_gb": 32.0,
+    "bytes_per_meas": 100,
+    "full_policy": "overwrite_oldest"
+  },
+  "sleep_ua_always_on_3v3": {
+    "rtc_in_mcu": 0.0,
+    "imu": 6.0,
+    "ds18b20": 3.0,
+    "sht20": 0.4,
+    "bmp280": 0.1,
+    "dht22": 40.0
+  },
+  "sensor_power_gating": true,
+  "output": {
+    "write_step_log": true
+  }
+}

@@ -1,0 +1,18 @@
+subsystem,annual_wh_rail_side,share_pct
+MCU (STM32),0.598,0.242
+IMU,2.656,1.075
+GNSS,1.859,0.753
+Satellite modem,12.504,5.062
+SD card,1.829,0.741
+Water T / conductivity / depth,1.029,0.417
+pH,23.906,9.679
+Turbidity,1.795,0.727
+Dissolved oxygen,3.948,1.599
+Air T/RH/P/irradiance,0.0,0.0
+Internal sensors,0.144,0.058
+Chlorophyll-a,0.0,0.0
+Always-on sleep currents,0.701,0.284
+Heater (rail side),95.0,38.462
+Converter losses,3.146,1.274
+BMS/MPPT quiescent,35.04,14.186
+Battery self-discharge,62.843,25.443

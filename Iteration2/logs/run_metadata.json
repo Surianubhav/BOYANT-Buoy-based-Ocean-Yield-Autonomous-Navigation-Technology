@@ -1,0 +1,116 @@
+{
+  "sim_version": "2.0.0",
+  "run_started_utc": "2026-11-12T14:52:27.718147+00:00",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "argv": [
+    "iter2boyant.py",
+    "--weather",
+    "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+    "--out",
+    "logs",
+    "--monte-carlo",
+    "200",
+    "--workers",
+    "4"
+  ],
+  "weather_file": "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+  "weather_sha256": "f1be0fa8fb86ae181aa7fdd5e366a53aec4403183811af9e59bfee9574d29e07",
+  "sst_file": null,
+  "sst_sha256": null,
+  "albedo_file": null,
+  "albedo_sha256": null,
+  "sst_source": "sinusoidal model [ASSUMED]",
+  "albedo_source": "monthly table [ASSUMED]",
+  "weather_qc": {
+    "file": "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+    "time_basis": "LST",
+    "rows_in_file": 8784,
+    "duplicate_rows": 0,
+    "missing_timestamps": 0,
+    "out_of_range_values": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "T2M": 0,
+      "RH2M": 0,
+      "WS10M": 0
+    },
+    "max_gap_h": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "T2M": 0,
+      "RH2M": 0,
+      "WS10M": 0
+    },
+    "hours_interpolated": 0,
+    "start": "2025-01-01 00:00:00",
+    "end": "2025-12-31 23:00:00",
+    "hours_used": 8760
+  },
+  "config_warnings": [],
+  "monte_carlo": {
+    "runs": 200,
+    "completed": 200,
+    "failed_runs": 0,
+    "seed": 2026,
+    "ranges": {
+      "pv_scale": [
+        0.7,
+        1.1
+      ],
+      "batt_nominal_wh": [
+        150.0,
+        192.0
+      ],
+      "heater_power_w": [
+        5.0,
+        8.0
+      ],
+      "mppt_eff": [
+        0.9,
+        0.97
+      ],
+      "k_xps": [
+        0.028,
+        0.04
+      ],
+      "motion": [
+        0.85,
+        0.98
+      ],
+      "fade_per_year": [
+        0.0,
+        0.05
+      ],
+      "r_int_ohm": [
+        0.04,
+        0.12
+      ]
+    },
+    "note": "Probabilities are only as meaningful as the input ranges; these ranges are placeholders.",
+    "p_survive": 1.0,
+    "p_survive_95ci": [
+      0.9812,
+      1.0
+    ],
+    "p_brownout": 0.0,
+    "min_soc_pct_p05": 76.49,
+    "min_soc_pct_p50": 79.45,
+    "min_soc_pct_p95": 83.3,
+    "p_t_batt_below_op_min": 0.0,
+    "p_sd_data_loss": 0.0,
+    "p_packet_loss": 0.0,
+    "spearman_vs_min_soc": {
+      "pv_scale": 0.417,
+      "batt_nominal_wh": 0.021,
+      "heater_power_w": -0.137,
+      "mppt_eff": -0.039,
+      "k_xps": -0.005,
+      "motion": 0.107,
+      "fade_per_year": 0.11,
+      "r_int_ohm": -0.106
+    }
+  },
+  "run_finished_utc": "2026-11-12T14:54:49.119074+00:00",
+  "failed": []
+}

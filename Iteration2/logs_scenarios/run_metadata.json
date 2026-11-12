@@ -1,0 +1,50 @@
+{
+  "sim_version": "2.0.0",
+  "run_started_utc": "2026-11-12T14:59:46.954321+00:00",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "argv": [
+    "iter2boyant.py",
+    "--weather",
+    "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+    "--out",
+    "logs_scenarios",
+    "--scenarios"
+  ],
+  "weather_file": "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+  "weather_sha256": "f1be0fa8fb86ae181aa7fdd5e366a53aec4403183811af9e59bfee9574d29e07",
+  "sst_file": null,
+  "sst_sha256": null,
+  "albedo_file": null,
+  "albedo_sha256": null,
+  "sst_source": "sinusoidal model [ASSUMED]",
+  "albedo_source": "monthly table [ASSUMED]",
+  "weather_qc": {
+    "file": "/home/anubhav-suri/Documents/BOYANT/BOYANT-Buoy-based-Ocean-Yield-Autonomous-Navigation-Technology/data/data_nasa.csv",
+    "time_basis": "LST",
+    "rows_in_file": 8784,
+    "duplicate_rows": 0,
+    "missing_timestamps": 0,
+    "out_of_range_values": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "T2M": 0,
+      "RH2M": 0,
+      "WS10M": 0
+    },
+    "max_gap_h": {
+      "ALLSKY_SFC_SW_DWN": 0,
+      "T2M": 0,
+      "RH2M": 0,
+      "WS10M": 0
+    },
+    "hours_interpolated": 0,
+    "start": "2025-01-01 00:00:00",
+    "end": "2025-12-31 23:00:00",
+    "hours_used": 8760
+  },
+  "config_warnings": [],
+  "run_finished_utc": "2026-11-12T15:00:22.803875+00:00",
+  "failed": []
+}

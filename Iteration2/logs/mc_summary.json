@@ -1,0 +1,63 @@
+{
+  "runs": 200,
+  "completed": 200,
+  "failed_runs": 0,
+  "seed": 2026,
+  "ranges": {
+    "pv_scale": [
+      0.7,
+      1.1
+    ],
+    "batt_nominal_wh": [
+      150.0,
+      192.0
+    ],
+    "heater_power_w": [
+      5.0,
+      8.0
+    ],
+    "mppt_eff": [
+      0.9,
+      0.97
+    ],
+    "k_xps": [
+      0.028,
+      0.04
+    ],
+    "motion": [
+      0.85,
+      0.98
+    ],
+    "fade_per_year": [
+      0.0,
+      0.05
+    ],
+    "r_int_ohm": [
+      0.04,
+      0.12
+    ]
+  },
+  "note": "Probabilities are only as meaningful as the input ranges; these ranges are placeholders.",
+  "p_survive": 1.0,
+  "p_survive_95ci": [
+    0.9812,
+    1.0
+  ],
+  "p_brownout": 0.0,
+  "min_soc_pct_p05": 76.49,
+  "min_soc_pct_p50": 79.45,
+  "min_soc_pct_p95": 83.3,
+  "p_t_batt_below_op_min": 0.0,
+  "p_sd_data_loss": 0.0,
+  "p_packet_loss": 0.0,
+  "spearman_vs_min_soc": {
+    "pv_scale": 0.417,
+    "batt_nominal_wh": 0.021,
+    "heater_power_w": -0.137,
+    "mppt_eff": -0.039,
+    "k_xps": -0.005,
+    "motion": 0.107,
+    "fade_per_year": 0.11,
+    "r_int_ohm": -0.106
+  }
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOYANT Simulation Results</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d30;--text:#edf3fb;--muted:#a9b8cc;--accent:#64d7c5}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Arial,sans-serif}
+main{max-width:1180px;margin:auto;padding:36px 22px} h1{font-size:34px;margin:0} .sub{color:var(--muted);margin:8px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:22px 0 30px}
+.kpi,.chart{background:var(--panel);border:1px solid #26364d;border-radius:14px;padding:16px}
+.kpi-label{color:var(--muted);font-size:13px} .kpi-value{font-size:27px;font-weight:700;margin-top:5px;color:var(--accent)}
+.chart{margin:16px 0 22px} .chart h2{font-size:18px;margin:0 0 12px} img{width:100%;height:auto;display:block;border-radius:8px;background:white}
+h2{margin-top:34px} .scenario-table{width:100%;border-collapse:collapse;background:var(--panel);font-size:13px}
+.scenario-table th,.scenario-table td{padding:10px;border-bottom:1px solid #26364d;text-align:left}
+.scenario-table th{color:var(--accent)} .note{margin-top:28px;padding:16px;border-left:4px solid #e6b85c;background:#20283a;color:#d7e0eb;border-radius:6px}
+footer{color:var(--muted);font-size:12px;margin-top:26px}
+@media(max-width:600px){main{padding:22px 12px}h1{font-size:27px}}
+</style></head><body><main>
+<h1>BOYANT | Simulation Results</h1>
+<p class="sub">365-day buoy system simulation · Visual summary generated from BOYANT output logs</p>
+<div class="grid"><div class="kpi"><div class="kpi-label">Simulation period</div><div class="kpi-value">365 days</div></div><div class="kpi"><div class="kpi-label">Minimum battery SOC</div><div class="kpi-value">78.6%</div></div><div class="kpi"><div class="kpi-label">Ending battery SOC</div><div class="kpi-value">100.0%</div></div><div class="kpi"><div class="kpi-label">Brownout duration</div><div class="kpi-value">0.0 h</div></div><div class="kpi"><div class="kpi-label">Solar potential</div><div class="kpi-value">34.7 kWh</div></div><div class="kpi"><div class="kpi-label">Heater energy</div><div class="kpi-value">133.0 Wh</div></div><div class="kpi"><div class="kpi-label">Minimum battery temperature</div><div class="kpi-value">-9.9 °C</div></div><div class="kpi"><div class="kpi-label">Packets dropped</div><div class="kpi-value">0</div></div></div>
+<section class="chart"><h2>01 Battery Soc</h2><img src="01_battery_soc.png" alt="01_battery_soc.png"></section><section class="chart"><h2>02 Temperature</h2><img src="02_temperature.png" alt="02_temperature.png"></section><section class="chart"><h2>03 Daily Energy</h2><img src="03_daily_energy.png" alt="03_daily_energy.png"></section><section class="chart"><h2>04 Monthly Energy</h2><img src="04_monthly_energy.png" alt="04_monthly_energy.png"></section><section class="chart"><h2>05 Subsystem Energy</h2><img src="05_subsystem_energy.png" alt="05_subsystem_energy.png"></section><section class="chart"><h2>06 Operating Modes</h2><img src="06_operating_modes.png" alt="06_operating_modes.png"></section><section class="chart"><h2>07 Scenario Min Soc</h2><img src="07_scenario_min_soc.png" alt="07_scenario_min_soc.png"></section><section class="chart"><h2>08 Scenario Brownout</h2><img src="08_scenario_brownout.png" alt="08_scenario_brownout.png"></section><section class="chart"><h2>09 Hourly State</h2><img src="09_hourly_state.png" alt="09_hourly_state.png"></section>
+<h2>Scenario comparison</h2><table class="dataframe scenario-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Scenario</th>
+      <th>Min Soc Pct</th>
+      <th>End Soc Pct</th>
+      <th>Hours Off Brownout</th>
+      <th>Survived Full Period</th>
+      <th>Packets Dropped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>baseline</td>
+      <td>78.6</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>spec_heater_8C</td>
+      <td>0.0</td>
+      <td>93.9</td>
+      <td>6,177.7</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sd_not_power_gated</td>
+      <td>0.0</td>
+      <td>99.9</td>
+      <td>3,683.7</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>panel_icing_accumulation</td>
+      <td>72.1</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>high_rate_5min_sampling</td>
+      <td>75.6</td>
+      <td>99.9</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>no_ice_albedo_open_water</td>
+      <td>77.8</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>L89HA_GNSS_plus_chlorophyll</td>
+      <td>80.9</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>comm_outage_30d_winter</td>
+      <td>78.0</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>link_70pct_success</td>
+      <td>78.2</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>battery_fade_20pct_per_year</td>
+      <td>83.2</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>panel_failure_day60</td>
+      <td>76.7</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sd_512MB_stop_when_full</td>
+      <td>78.6</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<div class="note"><b>Important:</b> Interpretation: These are outputs of the configured simulation model, not measured buoy performance. Survival and reliability claims depend on the assumptions, component data, weather inputs and validation.</div>
+<footer>Generated by BOYANT Results Visualizer. Charts are derived from the supplied simulation CSV outputs.</footer>
+</main></body></html>
